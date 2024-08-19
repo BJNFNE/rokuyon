@@ -57,7 +57,7 @@ install: $(NAME)
 	install -Dm755 $(NAME) "$(DESTDIR)/bin/$(NAME)"
 	install -Dm644 $(PKGNAME).desktop "$(DESTDIR)/share/applications/$(PKGNAME).desktop"
 
-uninstall: 
+uninstall:
 	rm -f "$(DESTDIR)/bin/$(NAME)"
 	rm -f "$(DESTDIR)/share/applications/$(PKGNAME).desktop"
 
