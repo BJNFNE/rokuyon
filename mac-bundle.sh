@@ -29,7 +29,7 @@ abspath() {
 # and fix their load paths
 fixup_libs() {
     local libs=($(otool -L "$1" | grep -vE "/System|/usr/lib|:$" | sed -E 's/'$'\t''(.*) \(.*$/\1/'))
-    
+
     for lib in "${libs[@]}"; do
         # Dereference symlinks to get the actual .dylib as binaries' load
         # commands can contain paths to symlinked libraries.
